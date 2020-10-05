@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/10/05 13:36:00 by mery             ###   ########.fr       */
+/*   Updated: 2020/10/05 14:12:16 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 double			abs_rounded(double a)
 {
-	return (round((fabs(a) * 1000000)) / 1000000);
+	int 	ret;
+
+	ret = (int)(fabs(a) * 1000000);
+	return ((double)((double)ret / 1000000));
 }

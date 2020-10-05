@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/10/05 13:57:17 by mery             ###   ########.fr       */
+/*   Updated: 2020/10/05 14:08:51 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,5 @@ int			main(int argc, char **argv)
 	else
 		ft_putstr("Usage: ft_trainer data [model]\n");
 	free(data);
-	while (1) {};
 	return (0);
 }
