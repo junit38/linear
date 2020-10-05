@@ -1,0 +1,81 @@
+// void		training_on_set(int fd, t_data *data)
+// {
+// 	double 	theta0;
+// 	double 	theta1;
+// 	double 	mins1;
+// 	double 	mins2;
+// 	int		stop;
+
+// 	theta0 = 10000;
+// 	theta1 = 0;
+// 	data->s1 = 0;
+// 	data->s2 = 0;
+// 	mins1 = 0;
+// 	stop = 0;
+// 	while (stop == 0)
+// 	{
+// 		// theta0 = 10000;
+// 		data->theta0 = theta0;
+// 		// while (data->s2 >= 0)
+// 		// {
+// 			data->theta1 = theta1;
+// 			lseek(fd, 0, SEEK_SET);
+// 			training(fd, data);
+// 			(void)mins2;
+// 		// 	mins2 = fabs(data->s2);
+// 		// 	printf("mins2: %f\n", mins2);
+// 		// 	theta1--;
+// 		// }
+// 		printf("data->s1: %f\n", data->s1);
+// 		printf("mins1: %f\n", mins1);
+// 		printf("theta0: %f\n\n", theta0);
+// 		if (fabs(data->s1) >= mins1 && mins1 != 0)
+// 			stop = 1;
+// 		else
+// 			mins1 = fabs(data->s1);
+// 		theta0--;
+// 	}
+// 	data->theta0 = theta0;
+// 	data->theta1 = theta1;	
+// }
+
+// void		training_on_set(int fd, t_data *data)
+// {
+// 	double 	theta0;
+// 	double 	theta1;
+// 	double 	mins1;
+// 	double 	mins2;
+// 	int		stop;
+
+// 	theta0 = 10000;
+// 	theta1 = 0;
+// 	data->s1 = 0;
+// 	data->s2 = 0;
+// 	mins1 = 0;
+// 	stop = 0;
+// 	while (stop == 0)
+// 	{
+// 		// theta0 = 10000;
+// 		data->theta0 = theta0;
+// 		// while (data->s2 >= 0)
+// 		// {
+// 			data->theta1 = theta1;
+// 			lseek(fd, 0, SEEK_SET);
+// 			training(fd, data);
+// 			(void)mins2;
+// 		// 	mins2 = fabs(data->s2);
+// 		// 	printf("mins2: %f\n", mins2);
+// 		// 	theta1--;
+// 		// }
+// 		printf("data->s2: %f\n", data->s2);
+// 		printf("mins2: %f\n", mins2);
+// 		printf("theta1: %f\n\n", theta1);
+// 		if (fabs(data->s2) >= mins2 && mins2 != 0 && theta1 != 0)
+// 			stop = 1;
+// 		else
+// 			mins2 = fabs(data->s2);
+// 		theta1 = theta1 - 0.001;
+// 	}
+// 	data->theta0 = theta0;
+// 	data->theta1 = theta1;	
+// }
