@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/10/05 14:08:51 by mery             ###   ########.fr       */
+/*   Updated: 2020/10/05 14:17:35 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,15 +61,18 @@ int			main(int argc, char **argv)
 		data = create_new_model();
 		train_model(argv[1], data);
 		ft_write_model(NULL, data);
+		if (data)
+			free(data);
 	}
 	else if (argc > 2)
 	{
 		data = create_new_model();
 		train_model(argv[1], data);
 		ft_write_model(argv[2], data);
+		if (data)
+			free(data);
 	}
 	else
 		ft_putstr("Usage: ft_trainer data [model]\n");
-	free(data);
 	return (0);
 }
