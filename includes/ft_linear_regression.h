@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/10/05 13:30:43 by mery             ###   ########.fr       */
+/*   Updated: 2020/10/05 13:51:32 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,6 @@ void	training_on_set(int fd, t_data *data);
 /*
 ** TOOLS.C
 */
-void		free_table(char **table);
+void	free_table(char **table);
 
 #endif

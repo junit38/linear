@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/10/05 13:46:32 by mery             ###   ########.fr       */
+/*   Updated: 2020/10/05 13:52:48 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int				get_normalize_max(int fd)
 	return (max);
 }
 
-int				get_normalize_min(int fd)
+int				get_normalize_min(int	fd)
 {
 	int		min;
 	int		current;
@@ -78,7 +78,6 @@ int				get_normalize_min(int fd)
 	}
 	return (min);
 }
-
 
 double			get_normalize_val(int val, t_data *data)
 {
