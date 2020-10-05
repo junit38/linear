@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/10/05 13:39:34 by mery             ###   ########.fr       */
+/*   Updated: 2020/10/05 14:31:12 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,14 @@ static double	get_s1(char *line, t_data *data)
 	char		**table;
 	double		s1;
 
+	s1 = 0;
 	table = ft_strsplit(line, ',');
-	s1 = get_estimated_price(ft_atoi(table[0]), data) - ft_atoi(table[1]);
-	free_table(table);
+	if (table)
+	{
+		if (table[0] && table[1])
+			s1 = get_estimated_price(ft_atoi(table[0]), data) - ft_atoi(table[1]);
+		free_table(table);
+	}
 	return (s1);
 }
 
@@ -28,10 +33,15 @@ static double	get_s2(char *line, t_data *data)
 	char	**table;
 	double	s2;
 
+	s2 = 0;
 	table = ft_strsplit(line, ',');
-	s2 = (get_estimated_price(ft_atoi(table[0]), data)
-		- ft_atoi(table[1])) * get_normalize_val(ft_atoi(table[0]), data);
-	free_table(table);
+	if (table)
+	{
+		if (table[0] && table[1])
+			s2 = (get_estimated_price(ft_atoi(table[0]), data)
+			- ft_atoi(table[1])) * get_normalize_val(ft_atoi(table[0]), data);
+		free_table(table);
+	}
 	return (s2);
 }
 

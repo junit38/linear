@@ -6,11 +6,36 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/10/05 14:17:35 by mery             ###   ########.fr       */
+/*   Updated: 2020/10/05 14:29:59 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_linear_regression.h"
+
+int				check_file(int fd)
+{
+	int		is_formated;
+	char	*line;
+	char	**table;
+
+	is_formated = 1;
+	lseek(fd, 0, SEEK_SET);
+	while (get_next_line(fd, &line) != 0 && is_formated == 1)
+	{
+		if (ft_isdigit(line[0]))
+		{
+			table = ft_strsplit(line, ',');
+			if (table)
+			{
+				if (!table[0] || !table[1])
+					is_formated = 0;
+				free_table(table);
+			}
+		}
+		free(line);
+	}
+	return (is_formated);
+}
 
 void		get_abscisse(int fd, t_data *data)
 {
@@ -40,7 +65,10 @@ void		train_model(char *file_data, t_data *data)
 			get_abscisse(fd, data);
 			data->xmax = get_normalize_max(fd);
 			data->xmin = get_normalize_min(fd);
-			training_on_set(fd, data);
+			if (check_file(fd))
+				training_on_set(fd, data);
+			else
+				ft_putstr("File badly formated\n");
 			close(fd);
 		}
 		else

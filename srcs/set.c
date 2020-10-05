@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/10/05 13:46:20 by mery             ###   ########.fr       */
+/*   Updated: 2020/10/05 14:22:14 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,13 @@ static double	get_current(char *line)
 	double	current;
 
 	table = ft_strsplit(line, ',');
-	current = ft_atoi(table[1]);
-	free_table(table);
+	current = 0;
+	if (table)
+	{
+		if (table[1])
+			current = ft_atoi(table[1]);
+		free_table(table);
+	}
 	return (current);
 }
 
