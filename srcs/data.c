@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/10/05 13:42:43 by mery             ###   ########.fr       */
+/*   Updated: 2020/10/15 14:40:48 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ double		get_theta(int fd)
 
 	theta = 0;
 	if (get_next_line(fd, &line) != 0)
+	{
 		theta = atof(line);
-	free(line);
+		free(line);
+	}
 	return (theta);
 }
 
