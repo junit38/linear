@@ -6,13 +6,13 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/14 15:04:41 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/14 15:07:01 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_linear_regression.h"
 
-int				check_file(int fd)
+static int	check_file(int fd)
 {
 	int		is_formated;
 	char	*line;

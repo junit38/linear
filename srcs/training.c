@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/14 15:04:19 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/14 15:07:56 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ static double	get_s1(char *line, t_data *data)
 	if (table)
 	{
 		if (table[0] && table[1])
-			s1 = get_estimated_price(ft_atoi(table[0]), data) - ft_atoi(table[1]);
+			s1 = get_estimated_price(ft_atoi(table[0]), data)
+			- ft_atoi(table[1]);
 		free_table(table);
 	}
 	return (s1);
@@ -38,8 +39,10 @@ static double	get_s2(char *line, t_data *data)
 	if (table)
 	{
 		if (table[0] && table[1])
-			s2 = (get_normalize_val(get_estimated_price(ft_atoi(table[0]), data), data)
-			- get_normalize_val(ft_atoi(table[1]), data)) * get_normalize_val(ft_atoi(table[0]), data);
+			s2 = (get_normalize_val(get_estimated_price(
+				ft_atoi(table[0]), data), data)
+				- get_normalize_val(ft_atoi(table[1]), data))
+				* get_normalize_val(ft_atoi(table[0]), data);
 		free_table(table);
 	}
 	return (s2);
