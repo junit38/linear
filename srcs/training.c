@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/14 15:07:56 by mery             ###   ########.fr       */
+/*   Updated: 2020/11/14 15:08:57 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static void		training(int fd, t_data *data)
 	data->s2 = s2 / m;
 }
 
-void		training_on_set(int fd, t_data *data)
+void			training_on_set(int fd, t_data *data)
 {
 	double	mins1;
 	double	mins2;
