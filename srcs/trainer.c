@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/15 15:43:46 by jmery             #+#    #+#             */
-/*   Updated: 2020/11/14 15:07:01 by mery             ###   ########.fr       */
+/*   Updated: 2020/12/04 15:09:33 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static int	check_file(int fd)
 	lseek(fd, 0, SEEK_SET);
 	while (get_next_line(fd, &line) != 0 && is_formated == 1)
 	{
+		ft_putstr(line);
+		ft_putchar('\n');
 		table = ft_strsplit(line, ',');
 		if (table)
 		{
