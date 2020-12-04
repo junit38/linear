@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/02 12:36:35 by jmery             #+#    #+#             */
-/*   Updated: 2020/12/04 15:04:01 by mery             ###   ########.fr       */
+/*   Updated: 2020/12/04 15:06:54 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,7 @@ int		get_next_line(int fd, char **line)
 	static char		*save;
 
 	if (save && *save) {
+		ft_bzero(buf, BUFF_SIZE);
 		ft_strcpy(buf, save);
 		ret = ft_strlen(save) + 1;
 		free(save);
