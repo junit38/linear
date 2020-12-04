@@ -6,7 +6,7 @@
 /*   By: mery <mery@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/02 12:36:35 by jmery             #+#    #+#             */
-/*   Updated: 2020/12/04 14:56:51 by mery             ###   ########.fr       */
+/*   Updated: 2020/12/04 15:04:01 by mery             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	*ft_load_next_line(int fd, char buf[], int *ret, int onsave)
 	}
 	while (!ft_strchr(tmp, '\n') && *ret > 0)
 	{
-		*ret = read(fd, buf, BUFF_SIZE);
+		*ret = read(fd, buf, BUFF_SIZE - 1);
 		tmp = ft_cat_and_realoc(tmp, buf, *ret);
 	}
 	tmp = ft_get_line(tmp);
